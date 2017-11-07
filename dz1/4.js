@@ -1,5 +1,5 @@
-var test2 = 1000 + '108';
-console.log(test2)
+var test3 = 1000 + '108';
+console.log(test3)
 
 /*
 1000 - тип данных изменился на string (строка)
