@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+
+    var a = (Math.round(1000 + Math.random() * (9999 - 1000))) - 4500;
+    var b = (Math.round(1000 + Math.random() * (9999 - 1000))) - 4500;
+
+    document.write('Проверка:<br>' + a + '<br>');
+    document.write(Math.sign(a)  + '<br><br>');
+    document.write(b  + '<br>');
+    document.write(Math.sign(b)  + '<br><br>***_-^..^-_***<br><br>');
+
+    if (a >= 0 && b >= 0) {
+        document.write(a + ' - ' + b + ' = ' + (a - b) + '<br>');
+    } else if (a < 0 && b < 0) {
+        document.write(a + ' * ' + b + ' = ' + (a * b) + '<br>');
+    } else {
+        document.write(a + ' + ' + b + ' = ' + (a + b) + '<br>');
+    }
+
+
+
+    /*
+    3) Объявить две целочисленные переменные a и b и задать им произвольные начальные значения. Затем написать скрипт, который работает по следующему принципу:
+    * если a и b положительные, вывести их разность;
+    * если а и b отрицательные, вывести их произведение;
+    * если а и b разных знаков, вывести их сумму;
+    ноль можно считать положительным числом.
+    */
+
+
+</script>
+
+</body>
+</html>
