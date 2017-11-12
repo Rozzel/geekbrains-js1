@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+function evenOdd(x, y) {
+    var z = y + 1;
+    do {
+
+        if (x == 0) {
+            document.write(x + ' - это ноль' + '<br>');
+        }   else if (x%2 != 0){
+                document.write(x + ' – нечетное число' + '<br>');
+        }       else {
+                    document.write(x + ' – четное число' + '<br>');
+        }
+     x++;
+    } while (x < z);
+}
+
+evenOdd(0, 10);
+
+
+</script>
+
+<!--
+
+С помощью цикла do…while написать функцию для вывода чисел от 0 до 10, чтобы результат выглядел так:
+0 – это ноль
+1 – нечетное число
+2 – четное число
+3 – нечетное число
+…
+10 – четное число
+
+ -->
+</body>
+</html>
