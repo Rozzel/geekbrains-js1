@@ -46,3 +46,4 @@ avg = average(6, 8);
 console.log(avg);
 
 
+// commit git через консоль
