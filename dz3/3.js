@@ -1,6 +1,6 @@
 function number(i, y) {
 
-    for (i; i !== y + 1; console.log(i++)){
+    for (i; i <= y ; console.log(i++)){
         // Здесь пусто Карл!
     }
 }
