@@ -9,7 +9,6 @@
 <script>
 
 function evenOdd(x, y) {
-    var z = y + 1;
     do {
         if (x == 0) {
             document.write(x + ' – это ноль' + '<br>');
@@ -19,7 +18,7 @@ function evenOdd(x, y) {
                     document.write(x + ' – четное число' + '<br>');
         }
      x++;
-    } while (x < z);
+    } while (x <= y);
 }
 
 evenOdd(0, 10);
