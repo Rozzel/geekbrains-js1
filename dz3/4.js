@@ -1,6 +1,6 @@
 function pyramid(x) {
     var numbers = []; // пустой массив
-    var z = 'x'; // строка с иксом
+    var z = 'x'; // строка с 'x'
     var index = 0; // счетчик для вывода массива
     for(var i = x ; i >= 1 ; i-- ){
         numbers.push(z); // в конец массива кладем содержимое z
