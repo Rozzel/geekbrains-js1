@@ -6,7 +6,7 @@ function numToObj(x) {
     if (arr.length > 3) {
         console.log('Введенное число: ' + x + ' > 999'); // проводим проверку на количество введеных цифр и выводм в консоль лог
     } else {
-        for (var i = arr.length; i !== 0; i--){
+        for (var i = arr.length; i !== 0 ; i--){
             object[keys[arr.length - i]] = +arr[i - 1]; // используя ключ для присвоения имен свойства и присваевываем значения преобразуя строку в число
         }
     }
