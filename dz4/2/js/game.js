@@ -14,12 +14,12 @@ function generateNumber(){
 		var part = Math.round(min + Math.random() * (max - min));
 		
 		// первое число всегда уникально
-		if(i == 0){
+		if(i === 0){
 			number[i] = part;
 		}
 		else{
 			// пока не сгенерируется уникальное число, генерируем новые случайные числа
-			while(number.indexOf(part) != -1){
+			while(number.indexOf(part) !== -1){
 				part = Math.round(min + Math.random() * (max - min));
 			}
 			
@@ -35,11 +35,11 @@ function guessNumber(){
 	// пока игрок не угадал число
 	while(gameIsRunning){
 		// выход из игры
-		if(parseInt(result) == -1){
+		if(parseInt(result) === -1){
 			gameIsRunning = false;
 		}
 		// игрок ввел некорректные данные
-		else if(parseInt(result) == 0 || isNaN(parseInt(result))){
+		else if(parseInt(result) === 0 || isNaN(parseInt(result))){
 			alert("Вы не ввели число");
 			// запрашиваем по новой
 			result = prompt("Введите число (-1 - закончить игру)", 0);
@@ -79,19 +79,22 @@ function checkNumber(myresult){
 	
 	for(var i = 0; i < ranks.length; i++){		
 		// если по индексу значения совпадают, то это бык
-		if(parseInt(ranks[i]) == number[i]){
+		if(parseInt(ranks[i]) === number[i]){
 			answer[1]++;
 		}
 		// если число вообще есть в массиве, то это корова
-		else if(number.indexOf(parseInt(ranks[i])) != -1){
+		else if(number.indexOf(parseInt(ranks[i])) !== -1){
 			answer[2]++;
 		}
 	}
 	
 	// если набралось 4 быка, то это победа
-	if(answer[1] == 4){
+	if(answer[1] === 4){
 		answer[0] = true;
 	}
 	
 	return answer;
 }
+
+document.write(number + '<br>');
+document.write(attempts + '<br>');
