@@ -21,4 +21,7 @@ numToObj(245);
 мы должны получить следующий объект:
 {‘единицы’: 5, ‘десятки’: 4, ‘сотни’: 2}.
 Если число превышает 999, необходимо выдать соответствующее сообщение с помощью console.log и вернуть пустой объект.
+
+
+function getObject(number) {	var keys = ['units', 'tens', 'hundreds', 'thousands'];    if(number > Math.pow(10, keys.length) - 1) {       console.log('Number is too big');       return {};    } else {		var digits = {};		for(var i = 0; i < keys.length; i++) {	  		digits[keys[i]] = Math.floor(number / Math.pow(10, i) % 10);		}    }}
  */
