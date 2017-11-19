@@ -5,7 +5,7 @@ var divBoard = document.createElement('div');
 divBoard.className = 'board';
 document.body.appendChild(divBoard);
 var keys = ' ABCDEFGH '.split('');
-var keysBoard = '           A8 B8 C8 D8 E8 F8 G8 H8   A7 B7 C7 D7 E7 F7 G7 H7   A6 B6 C6 D6 E6 F6 G6 H6   A5 B5 C5 D5 E5 F5 G5 H5   A4 B4 C4 D4 E4 F4 G4 H4   A3 B3 C3 D3 E3 F3 G3 H3   A2 B2 C2 D2 E2 F2 G2 H2   A1 B1 C1 D1 E1 F1 G1 H1'.split(' ');
+var keysBoard = '           чЛадья чКонь чСлон чФерзь чКороль чСлон чКонь чЛадья   чПешка чПешка чПешка чПешка чПешка чПешка чПешка чПешка   A6 B6 C6 D6 E6 F6 G6 H6   A5 B5 C5 D5 E5 F5 G5 H5   A4 B4 C4 D4 E4 F4 G4 H4   A3 B3 C3 D3 E3 F3 G3 H3   бПешка бПешка бПешка бПешка бПешка бПешка бПешка бПешка   бЛадья бКонь бСлон бФерзь бКороль бСлон бКонь бЛадья'.split(' ');
 window.leftNum = 8;
 window.RightNum = 8;
 
@@ -39,8 +39,10 @@ for (var i = 0; i < 100 ; i++) {
                 outlineRightNum();
             }else if (i < 21){
                 chetno();
+                fiGure();
             }else if (i < 31) {
                 nechetno();
+                fiGure();
             }else if (i < 41){
                 chetno();
             }else if(i < 51){
@@ -51,24 +53,27 @@ for (var i = 0; i < 100 ; i++) {
                 nechetno();
             }else if (i < 81){
                 chetno();
+                fiGure();
             }else {
                 nechetno();
+                fiGure();
+
             }
     } else {
         outlineBot();
     }
 
 }
-
+function fiGure() {
+    divSquare.innerText = keysBoard[i];
+}
 function black() {
     divSquare.className = 'square square-black';
     divBoardSel.appendChild(divSquare);
-    divSquare.innerText = keysBoard[i];
 }
 function white() {
         divSquare.className = 'square square-white';
         divBoardSel.appendChild(divSquare);
-        divSquare.innerText = keysBoard[i];
 }
 function outlineTop(){
         divSquare.className = 'square square-no-outline rotate';
@@ -105,3 +110,8 @@ function nechetno() {
     }
 }
 };
+
+
+/* Кладбище идей
+var keysBoard = '           A8 B8 C8 D8 E8 F8 G8 H8   A7 B7 C7 D7 E7 F7 G7 H7   A6 B6 C6 D6 E6 F6 G6 H6   A5 B5 C5 D5 E5 F5 G5 H5   A4 B4 C4 D4 E4 F4 G4 H4   A3 B3 C3 D3 E3 F3 G3 H3   A2 B2 C2 D2 E2 F2 G2 H2   A1 B1 C1 D1 E1 F1 G1 H1'.split(' ');
+ */
