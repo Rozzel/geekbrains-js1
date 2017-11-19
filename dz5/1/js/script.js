@@ -37,11 +37,11 @@ for (var i = 0; i < 100 ; i++) {
                     i === 89
             ){
                 outlineRightNum();
-            }else if (  i < 21){
+            }else if (i < 21){
                 chetno();
-            }else if ( i < 31) {
+            }else if (i < 31) {
                 nechetno();
-            }else if ( i < 41){
+            }else if (i < 41){
                 chetno();
             }else if(i < 51){
                 nechetno();
