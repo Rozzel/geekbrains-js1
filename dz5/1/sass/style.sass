@@ -1,0 +1,30 @@
+@import "variables"
+
+body
+  padding: 20px
+  margin: 20px
+  width: 100%
+  background-color: dimgray
+
+.board
+  width: 1000px
+  height: 1000px
+
+.square
+  width: 100px
+  height: 100px
+  float: left
+  text-align: center
+  outline: 2px solid slategray
+.square-white
+  background-color: $chessWhite
+  outline: 2px solid black
+  color: $chessBlack
+.square-black
+  background-color: $chessBlack
+  outline: 2px solid black
+  color: $chessWhite
+
+.square-no-outline
+  background-color: $chessOutline
+  color: red

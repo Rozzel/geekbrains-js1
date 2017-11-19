@@ -1,0 +1,32 @@
+body {
+  padding: 20px;
+  margin: 20px;
+  width: 100%;
+  background-color: dimgray; }
+
+.board {
+  width: 1000px;
+  height: 1000px; }
+
+.square {
+  width: 100px;
+  height: 100px;
+  float: left;
+  text-align: center;
+  outline: 2px solid slategray; }
+
+.square-white {
+  background-color: white;
+  outline: 2px solid black;
+  color: black; }
+
+.square-black {
+  background-color: black;
+  outline: 2px solid black;
+  color: white; }
+
+.square-no-outline {
+  background-color: white;
+  color: red; }
+
+/*# sourceMappingURL=style.css.map */
