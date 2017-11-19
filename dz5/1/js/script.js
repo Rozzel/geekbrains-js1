@@ -14,8 +14,8 @@ for (var i = 0; i < 100 ; i++) {
     var divSquare = document.createElement('div');
 
     if (i < 10){
-            outline();
-            divSquare.innerText = keys[i];
+            outlineTop();
+
         } else if (i < 90) {
             if (i === 10||
                 i === 20||
@@ -26,8 +26,7 @@ for (var i = 0; i < 100 ; i++) {
                 i === 70||
                 i === 80
             ) {
-                outline();
-                divSquare.innerText = leftNum--;
+                outlineleftNum();
             }else if (  i === 19||
                         i === 29||
                         i === 39||
@@ -37,8 +36,7 @@ for (var i = 0; i < 100 ; i++) {
                         i === 79||
                         i === 89
             ){
-                outline();
-                divSquare.innerText = RightNum--;
+                outlineRightNum();
             }else if (  i < 21){
                 if (i % 2 === 0){
                     black();
@@ -89,8 +87,7 @@ for (var i = 0; i < 100 ; i++) {
                 }
             }
     } else {
-        outline();
-        divSquare.innerText = keys[i - 90];
+        outlineBot();
     }
 
 }
@@ -98,21 +95,40 @@ for (var i = 0; i < 100 ; i++) {
 function black() {
     divSquare.className = 'square square-black';
     divBoardSel.appendChild(divSquare);
-
     divSquare.innerText = keysBoard[i];
 }
 
 function white() {
         divSquare.className = 'square square-white';
         divBoardSel.appendChild(divSquare);
-
         divSquare.innerText = keysBoard[i];
     }
 
-function outline(){
+function outlineBot(){
     divSquare.className = 'square square-no-outline';
     divBoardSel.appendChild(divSquare);
+    divSquare.innerText = keys[i - 90];
 }
+
+    function outlineTop(){
+        divSquare.className = 'square square-no-outline rotate';
+        divBoardSel.appendChild(divSquare);
+        divSquare.innerText = keys[i];
+    }
+
+function   outlineleftNum(){
+    divSquare.className = 'square square-no-outline';
+    divBoardSel.appendChild(divSquare);
+divSquare.innerText = leftNum--;
+}
+
+function outlineRightNum(){
+    divSquare.className = 'square square-no-outline rotate';
+    divBoardSel.appendChild(divSquare);
+    divSquare.innerText = RightNum--;
+}
+
+
 
 };
 
