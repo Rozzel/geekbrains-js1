@@ -59,6 +59,8 @@ function generateBoard() {
             outlineBot();
         }
     }
+
+// Раставляет фигуры
     function fiGure() {
       if (i < 19){
           var img = document.createElement('img');
@@ -89,6 +91,7 @@ function generateBoard() {
 
       }
     }
+// Раскраск доски
     function black() {
         divSquare.className = 'square square-black';
         divBoardSel.appendChild(divSquare);
@@ -97,6 +100,8 @@ function generateBoard() {
         divSquare.className = 'square square-white';
         divBoardSel.appendChild(divSquare);
     }
+
+// Растановка букв
     function outlineTop() {
         divSquare.className = 'square square-no-outline rotate';
         divBoardSel.appendChild(divSquare);
@@ -111,6 +116,7 @@ function generateBoard() {
             divSquare.innerText = keys[i - 91];
         }
     }
+// Растановка цифр
     function outlineleftNum() {
         divSquare.className = 'square square-no-outline';
         divBoardSel.appendChild(divSquare);
@@ -121,6 +127,8 @@ function generateBoard() {
         divBoardSel.appendChild(divSquare);
         divSquare.innerText = RightNum--;
     }
+
+// Логика для раскраски
     function chetno() {
         if (i % 2 === 0) {
             black();
