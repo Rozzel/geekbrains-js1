@@ -1,12 +1,15 @@
+@import url("https://fonts.googleapis.com/css?family=Gloria+Hallelujah");
 body {
-  padding: 20px;
-  margin: 20px;
-  width: 100%;
-  background-color: dimgray; }
+  width: 99%;
+  background-color: #333333;
+  font-family: "Gloria Hallelujah", cursive;
+  font-size: 18px; }
 
 .board {
   width: 800px;
-  height: 800px; }
+  height: 800px;
+  margin-top: 25px;
+  margin-left: 15px; }
 
 .square {
   width: 80px;
@@ -22,12 +25,13 @@ body {
   color: bisque; }
 
 .square-no-outline {
-  background-color: white;
   color: #FF0080;
   width: 80px;
   height: 50px;
   text-align: center;
-  padding-top: 30px; }
+  padding-top: 30px;
+  background-color: white;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAMAAAApB0NrAAAABlBMVEX///+pqalTpKl9AAAAAnRSTlMAGovxNEIAAAAdSURBVDjLY2AAAUaG4UYxDDsfjfp91O+jfqfE7wCzpQCw/dq+qQAAAABJRU5ErkJggg=="); }
 
 .rotate {
   transform: rotate(180deg); }

@@ -2,7 +2,7 @@ function generateBoard() {
     var divBoard = document.createElement('div');
     divBoard.className = 'board';
     document.body.appendChild(divBoard);
-    var keys = 'ABCDEFGH'.split('');
+    var keys = 'a b c d e f g h'.split(' ');
     var keysBoard = 'l ko s f ka s ko l p w- b-'.split(' ');
     var leftNum = 8;
     var RightNum = 8;
