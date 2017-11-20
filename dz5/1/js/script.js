@@ -1,15 +1,11 @@
-window.onload = function () {
-
-generateBoard();
-
 function generateBoard() {
     var divBoard = document.createElement('div');
     divBoard.className = 'board';
     document.body.appendChild(divBoard);
     var keys = 'ABCDEFGH'.split('');
-    var keysBoard = 'Ладья Конь Слон Ферзь Король Слон Конь Ладья Пешка б ч'.split(' ');
-    window.leftNum = 8;
-    window.RightNum = 8;
+    var keysBoard = 'l ko s f ka s ko l p w- b-'.split(' ');
+    var leftNum = 8;
+    var RightNum = 8;
 
     for (var i = 0; i < 100; i++) {
         var divBoardSel = document.querySelector('.board');
@@ -65,13 +61,32 @@ function generateBoard() {
     }
     function fiGure() {
       if (i < 19){
-          divSquare.innerText = keysBoard[10] + keysBoard[i - 11];
-        } else if (i < 29){
-          divSquare.innerText = keysBoard[10] + keysBoard[8];
-        } else if (i < 79){
-          divSquare.innerText = keysBoard[9] + keysBoard[8];
+          var img = document.createElement('img');
+          img.classList.add('figure');
+          img.setAttribute('src', 'images/figure/' + keysBoard[10] + keysBoard[i - 11] + '.svg');
+          img.setAttribute('alt', keysBoard[10] + keysBoard[i - 11]);
+          divSquare.appendChild(img);
+      } else if (i < 29){
+          img = document.createElement('img');
+          img.classList.add('figure');
+          img.setAttribute('src', 'images/figure/' + keysBoard[10] + keysBoard[8] + '.svg');
+          img.setAttribute('alt', keysBoard[10] + keysBoard[8]);
+          divSquare.appendChild(img);
+
+      } else if (i < 79){
+          img = document.createElement('img');
+          img.classList.add('figure');
+          img.setAttribute('src', 'images/figure/' + keysBoard[9] + keysBoard[8] + '.svg');
+          img.setAttribute('alt', keysBoard[9] + keysBoard[8]);
+          divSquare.appendChild(img);
+
       } else{
-          divSquare.innerText = keysBoard[9] + keysBoard[i - 81];
+          img = document.createElement('img');
+          img.classList.add('figure');
+          img.setAttribute('src', 'images/figure/' + keysBoard[9] + keysBoard[i - 81] + '.svg');
+          img.setAttribute('alt', keysBoard[9] + keysBoard[i - 81]);
+          divSquare.appendChild(img);
+
       }
     }
     function black() {
@@ -120,4 +135,9 @@ function generateBoard() {
             white();
         }
     }
-}};
+}
+
+
+window.onload = function () {
+    generateBoard();
+};

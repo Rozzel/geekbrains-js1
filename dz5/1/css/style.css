@@ -10,27 +10,30 @@ body {
 
 .square {
   width: 80px;
-  height: 50px;
-  float: left;
-  text-align: center;
-  padding-top: 30px;
-  outline: 2px solid slategray; }
+  height: 80px;
+  float: left; }
 
 .square-white {
-  background-color: white;
-  outline: 2px solid black;
-  color: black; }
+  background-color: bisque;
+  color: #722E15; }
 
 .square-black {
-  background-color: black;
-  outline: 2px solid black;
-  color: white; }
+  background-color: #722E15;
+  color: bisque; }
 
 .square-no-outline {
-  background-color: #EBEBEB;
-  color: red; }
+  background-color: white;
+  color: #FF0080;
+  width: 80px;
+  height: 50px;
+  text-align: center;
+  padding-top: 30px; }
 
 .rotate {
   transform: rotate(180deg); }
+
+.figure {
+  width: 80px;
+  height: 80px; }
 
 /*# sourceMappingURL=style.css.map */
