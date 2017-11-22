@@ -129,6 +129,8 @@ function generateBoard() {
     }
 
 // Логика для раскраски
+//      if (i % 2 === 0 && j % 2 === 0 || i % 2 !== 0 && j % 2 !== 0)
+//      if ((i + j) % 2 === 0)
     function chetno() {
         if (i % 2 === 0) {
             black();
