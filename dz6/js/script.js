@@ -23,17 +23,16 @@ function changeBigPicture(event){
 }
 
 function basketInit() {
-    var images = document.getElementsByTagName("img");
-    for (var i = 0; i < images.length; i++) {
-        a.onclick = basketPicture;
-    }
+    var a = document.getElementsByTagName("a");
+    a.onclick = basketPicture;
 }
 
 
 function basketPicture(event) {
     var basketBall = document.getElementById("basketBall");
     basketBall.innerHTML = "";
-
+    var smallSrc = event.target.getAttribute('src');
     var newImg = document.createElement('img');
+    newImg.src = smallSrc.replace('small', 'big');
     basketBall.appendChild(newImg);
 }
