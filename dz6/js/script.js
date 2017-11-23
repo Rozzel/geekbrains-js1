@@ -24,15 +24,19 @@ function changeBigPicture(event){
 
 function basketInit() {
     var a = document.getElementsByTagName("a");
-    a.onclick = basketPicture;
+    for (var i = 0; i < a.length; i++){
+        a[i].onclick = event.preventDefault(basketPicture);
+    }
+
+
 }
 
 
-function basketPicture(event) {
+function basketPicture() {
     var basketBall = document.getElementById("basketBall");
-    basketBall.innerHTML = "";
-    var smallSrc = event.target.getAttribute('src');
-    var newImg = document.createElement('img');
-    newImg.src = smallSrc.replace('small', 'big');
-    basketBall.appendChild(newImg);
+    basketBall.innerHTML = "<p>Карзина пуста</p>";
+    //var smallSrc = event.target.getAttribute('src');
+    //var newImg = document.createElement('img');
+    //newImg.src = smallSrc.replace('small', 'big');
+    //basketBall.appendChild(newImg);
 }
