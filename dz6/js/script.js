@@ -1,3 +1,9 @@
+window.onload = function () {
+    init();
+    basketInit();
+};
+
+
 function init(){
     var images = document.getElementsByTagName("img");
     for (var i = 0; i < images.length; i++) {
@@ -15,4 +21,19 @@ function changeBigPicture(event){
 
 
 }
-window.onload = init;
+
+function basketInit() {
+    var images = document.getElementsByTagName("img");
+    for (var i = 0; i < images.length; i++) {
+        a.onclick = basketPicture;
+    }
+}
+
+
+function basketPicture(event) {
+    var basketBall = document.getElementById("basketBall");
+    basketBall.innerHTML = "";
+
+    var newImg = document.createElement('img');
+    basketBall.appendChild(newImg);
+}

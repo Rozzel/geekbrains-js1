@@ -1,10 +1,25 @@
+@charset "UTF-8";
 body {
-  background-color: #333333; }
+  background-color: #333333;
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", sans-serif; }
 
 .boxGall {
   background-color: white;
   max-width: 350px;
-  min-height: 260px; }
+  min-height: 260px;
+  float: left;
+  margin-right: 12px;
+  border: 1px solid #95a5a6; }
+
+.boxColumn {
+  float: left;
+  display: block;
+  margin-left: 25px;
+  margin-right: 25px; }
+  .boxColumn img {
+    width: 194px; }
 
 #big_pic {
   width: 250px;
@@ -32,7 +47,79 @@ body {
   .gallery img {
     height: 52px; }
 
-.clearfix {
-  clear: both; }
+.wrapper {
+  width: 1024px;
+  margin: 0 auto;
+  box-shadow: 0 0 2px #cccccc; }
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table; }
+
+.header {
+  margin-bottom: 10px;
+  color: white;
+  background: #34495e; }
+
+.layout-column {
+  min-height: 50px;
+  background: rgba(192, 57, 43, 0.9);
+  border-bottom: 2px dashed #95a5a6;
+  padding: 12px; }
+
+.layout-column-logo {
+  float: left;
+  width: 280px; }
+
+nav {
+  float: right;
+  width: 130px;
+  text-align: right; }
+
+.features {
+  margin-bottom: 10px; }
+
+.features .layout-column {
+  min-height: 100px;
+  background: rgba(236, 240, 241, 0.9);
+  border-bottom: 2px dashed #95a5a6; }
+
+.footer {
+  min-height: 50px;
+  color: white;
+  background: #34495e; }
+
+.add-button {
+  color: #fff;
+  text-decoration: none;
+  user-select: none;
+  background: #d44b38;
+  padding: 0.7em 1.5em;
+  outline: none;
+  border: 0; }
+
+a.add-button:hover {
+  background: #e85f4c; }
+
+a.add-button:active {
+  background: #980f00; }
+
+.menu-toggle {
+  border: 0; }
+
+.menu-toggle:before {
+  content: "≡";
+  font: 2em "arial";
+  border: 0; }
+
+.basket img {
+  width: 50px; }
+
+.basketBall span {
+  margin-left: 12px; }
+.basketBall img {
+  display: block;
+  float: left; }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,10 +1,23 @@
 body
   background-color: #333333
+  margin: 0
+  padding: 0
+  font-family: "PT Sans", sans-serif
 
-.boxgall
+.boxGall
   background-color: white
   max-width: 350px
   min-height: 260px
+  float: left
+  margin-right: 12px
+  border: 1px solid #95a5a6
+.boxColumn
+  float: left
+  display: block
+  margin-left: 25px
+  margin-right: 25px
+  img
+    width: 194px
 
 #big_pic
   img
@@ -32,6 +45,72 @@ body
   img
     height: 52px
 
+.wrapper
+  width: 1024px
+  margin: 0 auto
+  box-shadow: 0 0 2px #cccccc
 
-.clearfix
+.clearfix::after
+  content: ""
   clear: both
+  display: table
+
+.header
+  margin-bottom: 10px
+  color: white
+  background: #34495e
+.layout-column
+  min-height: 50px
+  background: rgba(192, 57, 43, 0.9)
+  border-bottom: 2px dashed #95a5a6
+  padding: 12px
+.layout-column-logo
+  float: left
+  width: 280px
+nav
+  float: right
+  width: 130px
+  text-align: right
+
+.features
+  margin-bottom: 10px
+
+
+.features .layout-column
+  min-height: 100px
+  background: rgba(236, 240, 241, 0.9)
+  border-bottom: 2px dashed #95a5a6
+
+
+.footer
+  min-height: 50px
+  color: white
+  background: #34495e
+.add-button
+  color: #fff
+  text-decoration: none
+  user-select: none
+  background: rgb(212,75,56)
+  padding: .7em 1.5em
+  outline: none
+  border: 0
+a.add-button:hover
+  background: rgb(232,95,76)
+a.add-button:active
+  background: rgb(152,15,0)
+
+.menu-toggle
+  border: 0
+.menu-toggle:before
+  content: "\2261"
+  font: 2em "arial"
+  border: 0
+.basket
+  img
+    width: 50px
+.basketBall
+  span
+    margin-left: 12px
+  img
+    display: block
+    float: left
