@@ -2,7 +2,45 @@ window.onload = function () {
     init();
     cleanBasketInit();
     basketInit();
+    initArrow();
 };
+
+function initArrow(){
+    var arrow = document.getElementsByClassName('arrow');
+        arrow.onclick = changeArrow;
+
+    for (var i = 0; i < arrow.length; i++) {
+        arrow[i].onclick = changeArrow;
+    }
+}
+function changeArrow(event){
+    var bigDiv = document.getElementById('big_pic');
+    var dataPic = document.querySelector('#big_pic img').getAttribute('data-pic');
+    var dataArrow = event.target.getAttribute('data-arrow');
+    console.log(dataPic);
+    bigDiv.innerHTML = "";
+
+    if ( +dataArrow === 0){
+        if (+dataPic === 0){
+            bigDiv.innerHTML = bigPicImg[bigPicImg.length - 1]
+        }else{
+            bigDiv.innerHTML = bigPicImg[+dataPic - 1];
+        }
+
+
+    }else{
+        if (+dataPic + 1 === bigPicImg.length){
+            bigDiv.innerHTML = bigPicImg[bigPicImg.length - 4]
+        }else{
+            bigDiv.innerHTML = bigPicImg[+dataPic + 1];
+        }
+
+    }
+
+
+    event.preventDefault();
+}
+
 
 
 function init(){
@@ -69,3 +107,24 @@ function cleanBasket() {
 
     event.preventDefault();
 }
+
+var bigPicImg = [
+    '<img src="img/gallery/big/1.jpg" data-pic="0">',
+    '<img src="img/gallery/big/2.jpg" data-pic="1">',
+    '<img src="img/gallery/big/3.jpg" data-pic="2">',
+    '<img src="img/gallery/big/4.jpg" data-pic="3">'
+];
+
+
+
+/*
+
+    var bigDivImg = document.querySelector('#big_pic img');
+    var bigDivSrc = bigDivImg.getAttribute('src');
+    console.log(bigDivSrc);
+    var newImg = document.createElement('img');
+        newImg.src = smallSrc.replace('small', 'big');
+        bigDiv.appendChild(newImg);
+
+
+ */

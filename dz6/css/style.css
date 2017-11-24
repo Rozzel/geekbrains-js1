@@ -7,11 +7,18 @@ body {
 
 .boxGall {
   background-color: white;
-  max-width: 350px;
+  width: 310px;
   min-height: 260px;
   float: left;
   margin-right: 12px;
-  border: 1px solid #95a5a6; }
+  border: 1px solid #95a5a6;
+  text-align: center; }
+  .boxGall a {
+    text-decoration: none;
+    color: #333333;
+    font-size: 33px;
+    margin-left: 25px;
+    margin-right: 25px; }
 
 .boxColumn {
   float: left;
@@ -132,5 +139,18 @@ a.add-button:active {
   display: block;
   float: left;
   margin: 12px; }
+
+.arrow {
+  width: 0;
+  height: 0;
+  border: 18px solid transparent; }
+
+.arrow-right {
+  border-right-color: #d44b38;
+  border-left: 0; }
+
+.arrow-left {
+  border-left-color: #d44b38;
+  border-right: 0; }
 
 /*# sourceMappingURL=style.css.map */
