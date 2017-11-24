@@ -88,7 +88,9 @@ nav {
 .footer {
   min-height: 50px;
   color: white;
-  background: #34495e; }
+  background: #34495e;
+  text-align: center;
+  padding-top: 8px; }
 
 .add-button {
   color: #fff;
@@ -124,7 +126,7 @@ a.add-button:active {
 
 #cleanBasket {
   font-size: 12px;
-  color: #FF0080; }
+  color: #d44b38; }
 
 .basketTovar {
   display: block;

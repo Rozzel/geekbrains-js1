@@ -6,13 +6,13 @@ window.onload = function () {
 
 
 function init(){
-    var images = document.getElementsByClassName("galleryImg");
+    var images = document.getElementsByClassName('galleryImg');
     for (var i = 0; i < images.length; i++) {
         images[i].onclick = changeBigPicture;
     }
 }
 function changeBigPicture(event){
-    var bigDiv = document.getElementById("big_pic");
+    var bigDiv = document.getElementById('big_pic');
     bigDiv.innerHTML = "";
     var smallSrc = event.target.getAttribute('src');
 
@@ -25,26 +25,31 @@ function changeBigPicture(event){
 
 
 function basketInit() {
-    var a = document.getElementsByClassName("add-button");
+    var a = document.getElementsByClassName('add-button');
     for (var i = 0; i < a.length; i++){
         a[i].onclick = basketPicture;
     }
 }
 function  basketPicture() {
-    var basketBall = document.getElementById("basketBall");
+    var basketBall = document.getElementById('basketBall');
+    var vendorСode = event.target.getAttribute('data-code');
 
     var basketTovar = document.createElement('div');
         basketTovar.className = 'basketTovar';
-        basketTovar.textContent = 'test';
+        basketTovar.innerHTML = tovar[vendorСode].img +
+                                tovar[vendorСode].name +
+                                tovar[vendorСode].pricer;
+        basketBall.appendChild(basketTovar);
 
-    basketBall.appendChild(basketTovar);
+        var sumNo = document.getElementById('sumNo');
+        var sumNoNumber = document.getElementById('sumNo').textContent;
+            sumNo.innerHTML = +sumNoNumber + 1;
+
+        var sumRub = document.getElementById('sumRub');
+        var sumRubNumber = document.getElementById('sumRub').textContent;
+            sumRub.innerHTML = +sumRubNumber + tovar[vendorСode].price;
+
     event.preventDefault();
-
-
-    //var smallSrc = event.target.getAttribute('src');
-    //var newImg = document.createElement('img');
-    //newImg.src = smallSrc.replace('small', 'big');
-    //basketBall.appendChild(newImg);
 }
 
 
@@ -54,10 +59,13 @@ function cleanBasketInit() {
 }
 function cleanBasket() {
     var basketBall = document.getElementById("basketBall");
-    basketBall.innerHTML = "<p>Карзина пуста</p>";
+        basketBall.innerHTML = "";
+
     var sumNo = document.getElementById("sumNo");
-    sumNo.innerHTML = "0";
+        sumNo.innerHTML = "0";
+
     var sumRub = document.getElementById("sumRub");
-    sumRub.innerHTML = "0";
+        sumRub.innerHTML = "0";
+
     event.preventDefault();
 }
