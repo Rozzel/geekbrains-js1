@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/code.js" defer></script>
+    <title>ИГРА "ЗМЕЙКА"</title>
+</head>
+<body>
+    <div id="container">
+
+
+
+        <div id="gameArea">
+
+            <div id="gameField">
+
+                <span id="startHelp">УПРАВЛЯЙТЕ ЗМЕЙКОЙ СТРЕЛКАМИ НА КЛАВИАТУРЕ <br><br>ДЛЯ НАЧАЛА НАЖМИТЕ <br> "НАЧАТЬ ИГРУ"</span>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="gameName">ИГРА "ЗМЕЙКА"</div>
+
+        <div class="statistics statistics_title">СТАТИСТИКА</div>
+
+        <div class="statistics">Очки: <span id="points">0</span></div>
+
+        <div class="statistics">Время игры: <span id="gameTime">0</span></div>
+
+        <div class="statistics">Найдено еды: <span id="foundFoodStat">0</span></div>
+
+        <div class="statistics">Текущая длинна: <span id="snakeLengthStat">2</span></div>
+
+        <hr id="statisticsLine">
+
+        <div class="statistics">Максимум очков: <span id="maxPoints">0</span></div>
+
+        <div class="statistics">Максимум времени: <span id="maxGameTime">0</span></div>
+
+        <div class="statistics">Максимум еды: <span id="maxFoundFoodStat">0</span></div>
+
+        <div class="statistics">Максимальная длинна: <span id="maxSnakeLengthStat">2</span></div>
+
+
+
+        <button id="gameStartButton">НАЧАТЬ ИГРУ</button>
+
+        <button id="restartButton">РЕСТАРТ</button>
+
+        <hr id="buttonsLine">
+
+        <button id="resetStatisticsButton">СБРОС</button>
+
+        <hr id="underButtonsLine">
+
+
+
+        <div id="legend">
+
+            <div id="whiteLegend"></div><span>- простая пища дает 10 очков и увеличивает длинну змейки на 1</span>
+            <br>
+            <div id="yellowLegend"></div><span>- сытная пища дает 30 очков и увеличивает длинну змейки на 2</span>
+            <br>
+            <div id="greenLegend"></div><span>- веганская пища дает 50 очков и НЕ увеличивает длинну змейки</span>
+            <br>
+            <div id="redLegend"></div><span>- испорченная пища дает 5 очков и УМЕНЬШАЕТ длинну змейки на 1</span>
+            <br>
+            <div id="grayLegend"></div><span>- любая тусклая пища это ловушка, не попадайся!</span>
+
+            <hr id="footerLine">
+
+        </div>
+
+
+
+        <div id="developer">Разработчик: Антон Лебедев <br>
+            Home Work #7 <br>
+            Выполнено в рамках курса <br>
+            "Java Script Уровень 1" <br>
+            портала "GeekBrains" 2017г.</div>
+
+    </div>
+</body>
+</html>

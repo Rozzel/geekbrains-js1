@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("../img/grass.jpg");
+}
+
+#container {
+    margin: 0 auto;
+    width: 800px;
+    height: 800px;
+    background: black;
+    border: 3px wheat solid;
+    border-radius: 15px;
+}
+
+#gameArea {
+    width: 523px;
+    height: 523px;
+    margin: 20px 0 0 20px;
+    float: left;
+    background: darkolivegreen;
+    border: 3px saddlebrown solid;
+    border-radius: 15px;
+}
+
+#gameField {
+    width: 500px;
+    height: 500px;
+    margin: 8px auto;
+    border-radius: 5px;
+    background: url("../img/gameFieldBackground.jpg");
+}
+
+#startHelp {
+    float: left;
+    flex-wrap: wrap;
+    line-height: 54px;
+    color: lawngreen;
+    font-size: 28px;
+    font-weight: 800;
+    margin: 110px auto;
+    display: block;
+    text-align: center;
+}
+
+#gameOver {
+    float: left;
+    line-height: 54px;
+    color: red;
+    font-size: 28px;
+    font-weight: 800;
+    margin: 145px 60px;
+    display: block;
+    text-align: center;
+}
+
+.gameName {
+    margin: 25px auto;
+    color: gold;
+    text-align: center;
+}
+
+.statistics_title {
+    text-align: center;
+}
+
+.statistics {
+    width: 200px;
+    height: 20px;
+    margin: 17px 25px;
+    float: left;
+    color: greenyellow;
+}
+
+.statistics span {
+    float: right;
+    color: red;
+}
+
+#statisticsLine {
+    float: left;
+    width: 200px;
+    margin-left: 22px;
+}
+
+
+button  {
+    float: left;
+    height: 50px;
+    margin: 20px 0 0 80px;
+    padding: 0 20px;
+    color: darkred;
+    background: gray;
+    font-size: 18px;
+    font-weight: 800;
+    outline: none;
+}
+
+#gameStartButton {
+    box-sizing: border-box;
+    width: 190.5px;
+}
+
+#restartButton {
+    width: 135px;
+}
+
+#buttonsLine {
+    float: left;
+    margin: 20px 0 0 58px;
+    width:0;
+    height: 70px;
+}
+
+#resetStatisticsButton {
+    margin-left: 70px;
+    width: 120px;
+}
+
+button:hover, .flash {
+    background: white;
+    color: red;
+}
+
+#underButtonsLine {
+    float: left;
+    margin-left: 20px;
+    margin-bottom: 18px;
+    width: 750px;
+}
+
+#legend {
+    float: left;
+    width: 525.5px;
+    height: 100px;
+    margin: 20px;
+    margin-top: 0;
+    color: greenyellow;
+}
+
+#legend div {
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+    float: left;
+}
+
+#whiteLegend {
+    background: white;
+}
+
+#yellowLegend {
+    background: yellow;
+}
+
+#greenLegend {
+    background: green;
+}
+
+#redLegend {
+    background: red;
+}
+
+#grayLegend {
+    background: gray;
+}
+
+#footerLine {
+    float: right;
+    height: 125px;
+    margin-top: -98px;
+}
+
+#developer {
+    height: 100px;
+    float: left;
+    color: greenyellow;
+}
+
+.cell {
+    height: 20px;
+    width: 20px;
+    float: left;
+    border: solid 1px black;
+    border-collapse: collapse;
+}
+
+.snakeHead {
+    background-color: rgba(64, 95, 65, 0.87);
+    border-radius: 50%;
+}
+
+.snakeBody {
+    background-color: rgba(15, 30, 19, 0.91);
+    border-radius: 50%;
+}
+
+.food {
+    background-color: white;
+}
+
+.fatFood {
+    background-color: yellow;
+}
+
+.greenFood {
+    background-color: green;
+}
+
+.badFood {
+    background-color: red;
+}
+
+.trapFood {
+    background-color: gray;
+}
+
+.trapFatFood {
+    background-color: yellowgreen;
+}
+
+.trapGreenFood {
+    background-color: darkgreen;
+}
+
+.trapBadFood {
+    background-color: darkred;
+}
+
+
+
+
+
+
+
+

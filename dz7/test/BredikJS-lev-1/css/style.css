@@ -1,0 +1,68 @@
+body, div, ul, ul, table {
+  margin: 0;
+  padding: 0; }
+
+.main-container {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  justify-content: center;
+  flex-direction: column; }
+  .main-container .container-game {
+    background-image: url("../img/background.jpg");
+    width: inherit;
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+
+.game-field {
+  display: flex;
+  width: 1024px;
+  height: 500px; }
+  .game-field .game-field__table {
+    border-collapse: collapse;
+    margin: 20px 0 0 20px; }
+  .game-field .game-field__table-cell {
+    border: 1px solid white;
+    width: 20px;
+    height: 20px; }
+  .game-field .snake-unit {
+    background-image: url("../img/cat.gif");
+    background-repeat: no-repeat;
+    background-size: cover; }
+  .game-field .food-unit {
+    background-image: url("../img/food.gif");
+    background-repeat: no-repeat;
+    background-size: cover; }
+  .game-field .block-unit {
+    background-image: url("../img/block.gif");
+    background-repeat: no-repeat;
+    background-size: cover; }
+
+.game-data {
+  margin-top: 20px;
+  margin-left: 20px; }
+  .game-data .game-score {
+    display: block; }
+  .game-data .game-life {
+    display: flex; }
+    .game-data .game-life .life-count-container {
+      display: flex; }
+    .game-data .game-life .life-count {
+      background-image: url("../img/life.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: block;
+      width: 15px;
+      height: 15px;
+      margin-left: 2px; }
+
+.game-buttons {
+  margin-top: 20px; }
+  .game-buttons button {
+    padding: 5px;
+    cursor: pointer; }
+
+/*# sourceMappingURL=style.css.map */
